@@ -131,7 +131,7 @@ For concepts with `type: Attested Computation`:
 Fields that record identity (`generated.by`, `verified[].by`, `sources[].author`) use:
 
 - `<producer>/<version>` for agents: `reference_agent/gemini-2.5-pro`
-- `human:<id>` for people: `human:ahormati`
+- `human:<id>` for people: `human:sanath`
 - `process:<id>` for automation: `process:finance-nightly`
 
 Trust tiers are derived from the `human:` prefix — human-verified > machine-confirmed > unverified.
@@ -329,7 +329,7 @@ executor:
 attester:
   resource: references/attesters/revenue.py
 generated: { by: reference_agent/gemini-2.5-pro, at: 2026-06-20T22:53:05Z }
-verified: { by: human:ahormati, at: 2026-06-25T09:00:00Z }
+verified: { by: human:sanath, at: 2026-06-25T09:00:00Z }
 stale_after: 2026-09-23T00:00:00Z
 sources:
   - id: rev-policy

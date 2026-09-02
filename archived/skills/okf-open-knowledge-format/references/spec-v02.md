@@ -258,7 +258,7 @@ type: Playbook
 title: "Incident response: data freshness alert"
 description: Steps to triage a freshness alert on the orders pipeline.
 tags: [oncall, incident]
-generated: { by: human:ahormati, at: 2026-04-12T09:00:00Z }
+generated: { by: human:sanath, at: 2026-04-12T09:00:00Z }
 ---
 
 # Trigger
@@ -381,7 +381,7 @@ generated: { by: reference_agent/gemini-2.5-pro, at: 2026-06-20T22:53:05Z }
 
 ```yaml
 verified:
-  - { by: human:ahormati, at: 2026-06-25T09:00:00Z }
+  - { by: human:sanath, at: 2026-06-25T09:00:00Z }
   - { by: process:finance-nightly, at: 2026-06-26T02:00:00Z }
 ```
 
@@ -395,7 +395,7 @@ verified:
   list dash. Consumers MUST treat a bare mapping as a one-element list:
 
 ```yaml
-verified: { by: human:ahormati, at: 2026-06-25T09:00:00Z }
+verified: { by: human:sanath, at: 2026-06-25T09:00:00Z }
 ```
 
 ### 5.3 Trust tiers
@@ -493,7 +493,7 @@ single actor convention:
 
 - `<producer>/<version>` for agents and tools, for example
   `reference_agent/gemini-2.5-pro`.
-- `human:<id>` for a person, for example `human:ahormati`.
+- `human:<id>` for a person, for example `human:sanath`.
 - `process:<id>` for an automated process, for example
   `process:finance-nightly`.
 
@@ -622,7 +622,7 @@ executor:
 attester:
   resource: references/attesters/revenue.py
 generated: { by: reference_agent/gemini-2.5-pro, at: 2026-06-20T22:53:05Z }
-verified: { by: human:ahormati, at: 2026-06-25T09:00:00Z }
+verified: { by: human:sanath, at: 2026-06-25T09:00:00Z }
 stale_after: 2026-09-23T00:00:00Z
 sources:
   - id: rev-policy
@@ -899,7 +899,7 @@ description: Headline income-statement figures for a fiscal year.
 tags: [finance, income-statement]
 status: stable
 generated: { by: reference_agent/gemini-2.5-pro, at: 2026-06-20T22:53:05Z }
-verified: { by: human:ahormati, at: 2026-06-25T09:00:00Z }
+verified: { by: human:sanath, at: 2026-06-25T09:00:00Z }
 stale_after: 2026-12-31T00:00:00Z
 sources:
   - id: fpa-handbook
@@ -935,7 +935,7 @@ executor:
 attester:
   resource: references/attesters/sql-equality.py
 generated: { by: reference_agent/gemini-2.5-pro, at: 2026-06-28T14:00:00Z }
-verified: { by: human:ahormati, at: 2026-06-25T09:00:00Z }
+verified: { by: human:sanath, at: 2026-06-25T09:00:00Z }
 stale_after: 2026-12-31T00:00:00Z
 sources:
   - id: rev-policy

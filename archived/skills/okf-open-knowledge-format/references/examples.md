@@ -52,7 +52,7 @@ description: Headline income-statement figures for a fiscal year.
 tags: [finance, income-statement, kpi]
 status: stable
 generated: { by: reference_agent/gemini-2.5-pro, at: 2026-06-20T22:53:05Z }
-verified: { by: human:ahormati, at: 2026-06-25T09:00:00Z }
+verified: { by: human:sanath, at: 2026-06-25T09:00:00Z }
 stale_after: 2026-12-31T00:00:00Z
 sources:
   - id: fpa-handbook
@@ -99,7 +99,7 @@ executor:
 attester:
   resource: /references/attesters/sql-equality.py
 generated: { by: reference_agent/gemini-2.5-pro, at: 2026-06-28T14:00:00Z }
-verified: { by: human:ahormati, at: 2026-06-25T09:00:00Z }
+verified: { by: human:sanath, at: 2026-06-25T09:00:00Z }
 stale_after: 2026-12-31T00:00:00Z
 sources:
   - id: rev-policy
