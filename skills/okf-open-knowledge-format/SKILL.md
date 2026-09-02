@@ -16,7 +16,7 @@ metadata:
   author: ft.ia.br
   version: "2.0"
   date: 2026-08-25
-  repository: https://github.com/fabricioctelles/skills
+  repository: https://github.com/sanathusk/okf-skills
   license: Apache-2.0
   category: library-and-api-reference
   upstream: https://github.com/GoogleCloudPlatform/open-knowledge-format
@@ -24,9 +24,7 @@ metadata:
 
 # Open Knowledge Format (OKF)
 
-OKF is a vendor-neutral, open spec (v0.2, released by Google Cloud) for representing knowledge as a directory of markdown files with YAML frontmatter. No SDK required — if you can `cat` a file, you can read OKF.
-
-It formalizes the "LLM Wiki" pattern ([Karpathy's gist](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)) into an interoperable format: wikis written by different producers can be consumed by different agents without translation.
+OKF is a vendor-neutral, open spec (v0.2, released by Google Cloud) for representing knowledge as a directory of markdown files with YAML frontmatter. No SDK required — if you can `read` a file, you can read OKF.
 
 **v0.2 adds:** provenance tracking (`sources`), trust signals (`generated`, `verified`), lifecycle management (`status`, `stale_after`), and **Attested Computations** — a new concept type for sanctioned, verifiable calculations.
 
@@ -75,19 +73,19 @@ For the full spec, see:
 
 ### Trust & Lifecycle Fields (v0.2)
 
-| Field | Description |
-|-------|-------------|
-| `generated` | `{ by: <actor>, at: <ISO8601> }` — Who/what created this content and when |
-| `verified` | List of `{ by: <actor>, at: <ISO8601> }` — Who confirmed correctness |
-| `status` | `draft` \| `stable` \| `deprecated` — Default: `stable` |
-| `stale_after` | ISO 8601 datetime — Content is stale on/after this instant |
+| Field | Required? | Description |
+|-------|-----------|-------------|
+| `generated` | Optional | `{ by: <actor>, at: <ISO8601> }` — Who/what created this content and when |
+| `verified` | Optional | List of `{ by: <actor>, at: <ISO8601> }` — Who confirmed correctness |
+| `status` | Optional | `draft` \| `stable` \| `deprecated` — Default: `stable` |
+| `stale_after` | Optional | ISO 8601 datetime — Content is stale on/after this instant |
 
 ### Provenance Fields (v0.2)
 
-| Field | Description |
-|-------|-------------|
-| `sources` | List of source entries (see below) |
-| `usage_window` | `{ from, to }` — Time range for `usage_count` signals |
+| Field | Required? | Description |
+|-------|-----------|-------------|
+| `sources` | Optional | List of source entries (see below) |
+| `usage_window` | Optional | `{ from, to }` — Time range for `usage_count` signals |
 
 Each `sources` entry:
 - `resource` (REQUIRED): URL, bundle-relative path, or scope descriptor
